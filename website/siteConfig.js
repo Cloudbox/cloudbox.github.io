@@ -101,6 +101,8 @@ const siteConfig = {
   // No .html extensions for paths.
   cleanUrl: false,
 
+  cname: 'cloudbox.works',
+  
   // Open Graph and Twitter card images.
   ogImage: '',
   twitterImage: '',
