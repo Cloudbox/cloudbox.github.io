@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://cloudbox.works/blog</id>
+    <title>Cloudbox Blog</title>
+    <updated>2019-09-24T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://cloudbox.works/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Cloudbox news and events.</subtitle>
+    <logo>https://cloudbox.works/img/cb_circle.svg</logo>
+    <rights>Copyright © 2017-2019 Cloudbox</rights>
+    <entry>
+        <title type="html"><![CDATA[New Look]]></title>
+        <id>https://cloudbox.works/blog/2019/09/24/New-Look.html</id>
+        <link href="https://cloudbox.works/blog/2019/09/24/New-Look.html">
+        </link>
+        <updated>2019-09-24T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Launch of new website design.</p> <p>Future announcements will be posted here.</p> <p>Improvements to docs coming soon ...</p> ]]></summary>
+        <author>
+            <name>desimaniac</name>
+        </author>
+    </entry>
+</feed>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Cloudbox Blog</title>
+        <link>https://cloudbox.works/blog</link>
+        <description>The best place to stay up-to-date with the latest Cloudbox news and events.</description>
+        <lastBuildDate>Tue, 24 Sep 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Cloudbox Blog</title>
+            <url>https://cloudbox.works/img/cb_circle.svg</url>
+            <link>https://cloudbox.works/blog</link>
+        </image>
+        <copyright>Copyright © 2017-2019 Cloudbox</copyright>
+        <item>
+            <title><![CDATA[New Look]]></title>
+            <link>https://cloudbox.works/blog/2019/09/24/New-Look.html</link>
+            <guid>https://cloudbox.works/blog/2019/09/24/New-Look.html</guid>
+            <pubDate>Tue, 24 Sep 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Launch of new website design.</p> <p>Future announcements will be posted here.</p> <p>Improvements to docs coming soon ...</p> ]]></description>
+        </item>
+    </channel>
+</rss>
