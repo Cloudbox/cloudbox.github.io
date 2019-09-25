@@ -1,0 +1,71 @@
+/* your custom css */
+
+/* Inpsired from https://noderize.js.org */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 736px) {
+    #feature .blockImage > img {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
+
+.mainContainer .wrapper a,
+.inner .projectIntro a {
+    text-decoration: underline;
+    text-decoration-color: #abbdcd !important;
+}
+
+.mainContainer .wrapper a:hover,
+.mainContainer .wrapper a:focus,
+.inner .projectIntro a:hover,
+.inner .projectIntro a:focus {
+    text-decoration: underline;
+    text-decoration-color: #343a40 !important;
+}
+
+#feature .blockImage > img {
+    height: 40px;
+}
+
+a,
+a:hover {
+	color: #3d434b;
+	text-decoration: none
+}
+
+a:active,
+a:hover {
+	outline-width: 0
+}
+
+a:not([href]) {
+	color: inherit;
+	text-decoration: none
+}
+
+code {
+	padding: 2px 4px;
+	font-size: 90%;
+	color: #c7254e;
+	background-color: #f9f2f4;
+	border-radius: 4px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+blockquote {
+	background-color: rgba(61, 67, 75, 0.08);
+	border-left: 8px solid #3d434b7a;
+	padding: 15px 30px 15px 15px;
+}
+
