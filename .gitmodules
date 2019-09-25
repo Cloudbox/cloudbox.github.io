@@ -1,0 +1,3 @@
+[submodule "website/scripts"]
+	path = website/scripts
+	url = git@github.com:Cloudbox/scripts.git
