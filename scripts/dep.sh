@@ -65,6 +65,9 @@ apt-get install -y --reinstall \
     build-essential \
     libssl-dev \
     libffi-dev \
+    python3 \
+    libpython3-dev \
+    python3.6-dev \
     python3-dev \
     python3-pip \
     python-dev \
