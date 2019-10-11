@@ -65,9 +65,6 @@ apt-get install -y --reinstall \
     build-essential \
     libssl-dev \
     libffi-dev \
-    python3 \
-    libpython3-dev \
-    python3.6-dev \
     python3-dev \
     python3-pip \
     python-dev \
@@ -96,5 +93,5 @@ python -m pip install --disable-pip-version-check --upgrade --force-reinstall \
     ansible==${1-$ANSIBLE}
 
 ## Copy pip to /usr/bin
-cp /usr/local/bin/pip /usr/bin/pip >/dev/null 2>&1 || :
-cp /usr/local/bin/pip3 /usr/bin/pip3 >/dev/null 2>&1 || :
+cp /usr/local/bin/pip /usr/bin/pip
+cp /usr/local/bin/pip3 /usr/bin/pip3
