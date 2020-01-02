@@ -20,6 +20,7 @@
 #################################################################################
 
 ## Constants
+readonly SYSCTL_PATH="/etc/sysctl.conf"
 readonly PIP="9.0.3"
 readonly ANSIBLE="2.5.14"
 
@@ -35,14 +36,23 @@ fi
 export DEBIAN_FRONTEND=noninteractive
 
 ## Disable IPv6
-if [ -f /etc/sysctl.d/99-sysctl.conf ]; then
-    grep -q -F 'net.ipv6.conf.all.disable_ipv6 = 1' /etc/sysctl.d/99-sysctl.conf || \
-        echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> /etc/sysctl.d/99-sysctl.conf
-    grep -q -F 'net.ipv6.conf.default.disable_ipv6 = 1' /etc/sysctl.d/99-sysctl.conf || \
-        echo 'net.ipv6.conf.default.disable_ipv6 = 1' >> /etc/sysctl.d/99-sysctl.conf
-    grep -q -F 'net.ipv6.conf.lo.disable_ipv6 = 1' /etc/sysctl.d/99-sysctl.conf || \
-        echo 'net.ipv6.conf.lo.disable_ipv6 = 1' >> /etc/sysctl.d/99-sysctl.conf
-    sysctl -p
+if [ -f "$SYSCTL_PATH" ]; then
+    if [[ $(lsb_release -rs) < 18.04 ]]; then
+        ## Add 'Disable IPv6' entries into systctl
+        grep -q -F 'net.ipv6.conf.all.disable_ipv6 = 1' "$SYSCTL_PATH" || \
+            echo 'net.ipv6.conf.all.disable_ipv6 = 1' >> "$SYSCTL_PATH"
+        grep -q -F 'net.ipv6.conf.default.disable_ipv6 = 1' "$SYSCTL_PATH" || \
+            echo 'net.ipv6.conf.default.disable_ipv6 = 1' >> "$SYSCTL_PATH"
+        grep -q -F 'net.ipv6.conf.lo.disable_ipv6 = 1' "$SYSCTL_PATH" || \
+            echo 'net.ipv6.conf.lo.disable_ipv6 = 1' >> "$SYSCTL_PATH"
+        sysctl -p
+    else
+        ## Remove 'Disable IPv6' entries from systctl
+        sed -i -e '/^net.ipv6.conf.all.disable_ipv6/d' "$SYSCTL_PATH"
+        sed -i -e '/^net.ipv6.conf.default.disable_ipv6/d' "$SYSCTL_PATH"
+        sed -i -e '/^net.ipv6.conf.lo.disable_ipv6/d' "$SYSCTL_PATH"
+        sysctl -p
+    fi
 fi
 
 ## Install Pre-Dependencies
