@@ -78,7 +78,8 @@ apt-get install -y --reinstall \
     python3-dev \
     python3-pip \
     python-dev \
-    python-pip
+
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py && python get-pip.py
 
 ## Install pip3 Dependencies
 python3 -m pip install --disable-pip-version-check --upgrade --force-reinstall \
